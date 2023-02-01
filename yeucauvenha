@@ -1,0 +1,5 @@
+- kiểm tra nếu phiên bản PHP của xampp <8.0 thì xóa xampp đi và cài lại bản 8.1
+- >=8.0 là ok
+- cài đặt composer trên trang https://getcomposer.org/
+- cài đặt xong composer kiểm tra bằng cách
+- ấn chuột vào màn hình desktop chọn git bash here và gõ lệnh composer -v 
