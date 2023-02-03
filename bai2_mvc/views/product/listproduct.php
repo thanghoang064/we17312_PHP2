@@ -11,14 +11,16 @@
     <table border="1">
         <tr>
             <td>id</td>
-            <td>name</td>
-            <td>price</td>
+            <td>ten san pham</td>
+            <td>gia</td>
+            <td>hanh dong</td>
         </tr>
-        <?php foreach ($product as $key=>$value) { ?>
+        <?php foreach ($products as $key=>$value) { ?>
         <tr>
             <td><?php echo $value['id']; ?></td>
-            <td><?php echo $value['name']; ?></td>
-            <td><?php echo $value['price']; ?></td>
+            <td><?php echo $value['ten_sp']; ?></td>
+            <td><?php echo $value['gia']; ?></td>
+            <td><a href="?url=remove-product&id=<?php echo $value['id']; ?>">Xoa</a></td>
         </tr>
         <?php } ?>
     </table>

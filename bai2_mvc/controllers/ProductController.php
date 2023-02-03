@@ -1,13 +1,31 @@
 <?php
+//ham danhsachproduct
 require_once "models/Product.php";
-function listProduct() {
-    $products = getProduct();
-    include_once 'views/product/list.php';
+class ProductController
+{
+    function listProduct()
+    {
+//    return "Danh sach sam pham";
+        //goi model
+        $product = new Product();
+        $products = $product->getProduct();
+
+        include_once "views/product/listproduct.php";
+
+    }
+
+    function addProduct()
+    {
+        return "them san pham";
+    }
+
+    function removeProduct()
+    {
+        $product = new Product();
+        $product->deleteProduct();
+        header("location: ?url=/");
+        die();
+    }
 }
-function addProduct() {
-    return "Day la chuc nang them san pham";
-}
-// tao fuction giong nhu tren
-// tao bang nhan vien gom id,ten,luong
-// lamf chuc nang danh sach,them,xoa bang mvc da hoc
+
 ?>
